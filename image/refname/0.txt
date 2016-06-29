@@ -1,0 +1,1 @@
+file="C:\ADK4.0.0\tools\bin\SampleAudioPrompts\power_on_norm_8k.wav",compression=ADPCM,rate=8000,channels=Mono

@@ -45,3 +45,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Sia ignores
+*.o
+*.log
+*.dbg
+*.sym
+*.xpv
+*.fs
+*.xap
+*.app
+*.xdv
+*.map
+depend/

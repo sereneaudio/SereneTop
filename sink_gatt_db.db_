@@ -1,0 +1,143 @@
+# 1 "sink_gatt_db.db"
+# 1 "<built-in>"
+# 1 "<command line>"
+# 1 "sink_gatt_db.db"
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_server_db.dbi" 1
+
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_server_uuids.h" 1
+# 5 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_server_db.dbi" 2
+
+primary_service {
+    uuid : 0x1801,
+    name : "GATT_SERVICE",
+    characteristic {
+        uuid : 0x2A05,
+        name : "GATT_SERVICE_CHANGED",
+        properties : [ indicate ],
+        client_config
+        {
+            name : "GATT_SERVICE_CHANGED_CLIENT_CONFIG",
+            flags : [ FLAG_IRQ ]
+        }
+    }
+},
+# 2 "sink_gatt_db.db" 2
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_gap_server_db.dbi" 1
+
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_gap_server_uuids.h" 1
+# 5 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_gap_server_db.dbi" 2
+
+primary_service {
+    uuid : 0x1800,
+    name : "GAP_SERVICE",
+    characteristic {
+        uuid : 0x2A00,
+        name : "DEVICE_NAME",
+        flags : [ FLAG_IRQ ],
+        properties : [ read ]
+    },
+    characteristic {
+        uuid : 0x2A01,
+        name : "DEVICE_APPEARANCE",
+        flags : [ FLAG_IRQ ],
+        properties : [ read ]
+    }
+},
+# 3 "sink_gatt_db.db" 2
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_battery_server_db.dbi" 1
+
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_battery_server_uuids.h" 1
+# 5 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_battery_server_db.dbi" 2
+# 5 "sink_gatt_db.db" 2
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_transmit_power_server_db.dbi" 1
+# 19 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_transmit_power_server_db.dbi"
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_transmit_power_server_uuids.h" 1
+# 20 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_transmit_power_server_db.dbi" 2
+
+
+
+
+
+
+primary_service {
+    uuid : 0x1804,
+    name : "TRANSMIT_POWER_SERVER_SERVICE",
+# 38 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_transmit_power_server_db.dbi"
+    characteristic {
+        uuid : 0x2A07,
+        name : "TRANSMIT_POWER_LEVEL",
+        flags : [ FLAG_IRQ, FLAG_ENCR_R],
+        properties : [ read ],
+        value : 0x0
+    }
+},
+# 8 "sink_gatt_db.db" 2
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_imm_alert_server_db.dbi" 1
+# 19 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_imm_alert_server_db.dbi"
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_imm_alert_server_uuids.h" 1
+# 20 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_imm_alert_server_db.dbi" 2
+
+
+
+
+
+
+primary_service {
+    uuid : 0x1802,
+    name : "IMM_ALERT_SERVICE",
+# 38 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_imm_alert_server_db.dbi"
+    characteristic {
+        uuid : 0x2A06,
+        name : "IMM_ALERT_LEVEL",
+        flags : [ FLAG_IRQ, FLAG_ENCR_W],
+        properties : [ write_cmd ],
+        value : 0x0
+    }
+},
+# 11 "sink_gatt_db.db" 2
+
+
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_link_loss_server_db.dbi" 1
+# 19 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_link_loss_server_db.dbi"
+# 1 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_link_loss_server_uuids.h" 1
+# 20 "C:/ADK4.0.0/tools/include/profiles/BlueLab-7.0.1-Release/gatt_link_loss_server_db.dbi" 2
+
+
+primary_service {
+    uuid : 0x1803,
+    name : "LINK_LOSS_SERVICE",
+
+
+
+    characteristic {
+        uuid : 0x2A06,
+        name : "LINK_LOSS_ALERT_LEVEL",
+        properties : [read, write],
+        flags : [FLAG_IRQ, FLAG_ENCR_R, FLAG_ENCR_W],
+        value : 0x0
+    }
+},
+# 14 "sink_gatt_db.db" 2
+
+
+
+
+
+
+primary_service { uuid : 0x180f, name : "BATTERY_SERVICE1", characteristic { uuid : 0x2a19, name : "BATTERY_LEVEL1", flags : [ FLAG_IRQ ], properties : [ read , notify ], value : 0x0, presentation_format { name : "BATTERY_LEVEL_PRESENTATION1", flags : [ FLAG_IRQ , FLAG_DYNLEN ] }, client_config { name : "BATTERY_LEVEL_CLIENT_CONFIG1", flags : [ FLAG_IRQ , FLAG_DYNLEN ] } } },
+
+primary_service { uuid : 0x180f, name : "BATTERY_SERVICE2", characteristic { uuid : 0x2a19, name : "BATTERY_LEVEL2", flags : [ FLAG_IRQ ], properties : [ read , notify ], value : 0x0, presentation_format { name : "BATTERY_LEVEL_PRESENTATION2", flags : [ FLAG_IRQ , FLAG_DYNLEN ] }, client_config { name : "BATTERY_LEVEL_CLIENT_CONFIG2", flags : [ FLAG_IRQ , FLAG_DYNLEN ] } } },
+
+
+primary_service { uuid : 0x180f, name : "BATTERY_SERVICE3", characteristic { uuid : 0x2a19, name : "BATTERY_LEVEL3", flags : [ FLAG_IRQ ], properties : [ read , notify ], value : 0x0, presentation_format { name : "BATTERY_LEVEL_PRESENTATION3", flags : [ FLAG_IRQ , FLAG_DYNLEN ] }, client_config { name : "BATTERY_LEVEL_CLIENT_CONFIG3", flags : [ FLAG_IRQ , FLAG_DYNLEN ] } } },
