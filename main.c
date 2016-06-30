@@ -427,6 +427,7 @@ static void handleUEMessage  ( Task task, MessageId id, Message message )
     /* Event state control is done by the config - we will be in the right state for the message
     therefore messages need only be passed to the relative handlers unless configurable */
     sinkState lState = stateManagerGetState() ;
+    runtime_block1_t * temp;
 
     /*if we do not want the event received to be indicated then set this to FALSE*/
     bool lIndicateEvent = TRUE ;
@@ -473,6 +474,25 @@ static void handleUEMessage  ( Task task, MessageId id, Message message )
                 
         case (EventUsrUnused402C):
             MAIN_DEBUG(("Capsense works! yaaaay\n"));
+            temp = theSink.rundata;
+            /*
+            switch (peerGetSource())
+            {
+            case RELAY_SOURCE_NULL:
+                MessageSend(&theSink.task, EventUsrSelectAudioSourceAnalog, 0);
+                break;
+            case RELAY_SOURCE_ANALOGUE:
+                MessageSend(&theSink.task, EventUsrSelectAudioSourceUSB, 0);
+                break;
+            case RELAY_SOURCE_USB:
+                MessageSend(&theSink.task, EventUsrSelectAudioSourceAG1, 0);
+                break;
+            case RELAY_SOURCE_A2DP:
+                MessageSend(&theSink.task, EventUsrSelectAudioSourceAnalog, 0);
+                break;
+            }
+            break;
+            */
         break;
         
         case (EventUsrDebugKeysToggle):

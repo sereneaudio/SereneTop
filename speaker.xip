@@ -181,7 +181,7 @@
    <property key="characters" >1</property>
    <property key="config_storage" >0</property>
    <property key="debugtransport" >[SPITRANS=USB SPIPORT=0]</property>
-   <property key="defines" >DEBUG_MAIN, DEBUG_BUILD,DEBUG_PRINT_ENABLED </property>
+   <property key="defines" >DEBUG_MAIN, DEBUG_BUILD,DEBUG_PRINT_ENABLED, DEBUG_AUDIO </property>
    <property key="enable_anc" >0</property>
    <property key="enable_ancs_client" >1</property>
    <property key="enable_avrcp" >1</property>
@@ -203,6 +203,7 @@
    <property key="enable_pbap" >1</property>
    <property key="enable_peer_battery_level" >1</property>
    <property key="enable_peer_device" >2</property>
+   <property key="enable_soundbar" >0</property>
    <property key="enable_speech_regcognition" >0</property>
    <property key="enable_upgrade" >1</property>
    <property key="enable_usb" >0</property>
